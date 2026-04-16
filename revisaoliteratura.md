@@ -1,6 +1,6 @@
 # ATIVIDADE: Revisão de Literatura e Proposição de Problemas em Aprendizado de Máquina com Apoio de IA
 
-**Alunos:** Luanna Vitoria Benezar Viana, Marcos Gabriel Peixoto Almeida
+**Alunos:** Luanna Vitoria Benezar Viana, Marcos gabriel Peixoto Almeida
 
 ## Etapa 1 – Revisão da literatura com SciSpace
 
@@ -57,11 +57,11 @@ Soluções com machine learning para deficiência visual focam em reconhecimento
 
 ## Problemas resolvidos
 
-- **Reconhecimento de faces e emoções** sistemas que identificam pessoas conhecidas e sinais emocionais para reduzir isolamento social e apoiar interação, incluindo leitura de rótulos de medicamentos e feedback por voz.  
-- **Identificação de objetos e obstáculos** detecção em tempo real para permitir navegação autônoma e evitar colisões.  
-- **Leitura de texto e OCR** extração de informação de rótulos, receitas e documentos.  
-- **Sinalização viária e atravessamento** detecção de semáforos e faixas de pedestre.  
-- **Reconhecimento de moeda e notas** identificação de cédulas e moedas.  
+- Reconhecimento de faces e emoções  
+- Identificação de objetos e obstáculos  
+- Leitura de texto (OCR)  
+- Sinalização viária  
+- Reconhecimento de moeda  
 
 ---
 
@@ -69,40 +69,37 @@ Soluções com machine learning para deficiência visual focam em reconhecimento
 
 | Área | Exemplos de implementação | Observações |
 |---|---|---|
-| Navegação e prevenção de colisão | Wearables com câmera + sensor de distância | Feedback sonoro em tempo real |
-| Reconhecimento de objetos e cenas | Modelos YOLO / CNN | Uso em mobile e Raspberry Pi |
-| Leitura de texto e OCR | OCR em smartphone | Leitura assistida |
-| Reconhecimento facial e emoções | Identificação de pessoas | Apoio social |
-| Trânsito e semáforos | Detecção com CNN/YOLO | Alta acurácia |
-| Identificação de moedas | CNN | Alta precisão em testes |
+| Navegação | Wearables + sensores | Feedback sonoro |
+| Objetos | YOLO / CNN | Uso mobile |
+| OCR | Smartphone | Leitura assistida |
+| Facial | Identificação | Apoio social |
+| Trânsito | CNN/YOLO | Alta acurácia |
+| Moedas | CNN | Alta precisão |
 
 ---
 
 ## Tipos de tarefa de ML
-
 - Classificação e detecção  
 - Reconhecimento de texto  
-- Regressão (estimativa de distância)  
-- Geração multimodal  
+- Regressão  
+- Multimodal  
 
 ---
 
 ## Principais desafios encontrados
-
-- Latência e processamento em tempo real  
-- Limitações de hardware  
-- Conjuntos de dados restritos  
-- Precisão em cenários reais  
-- Integração de sensores e usabilidade  
+- Latência  
+- Hardware limitado  
+- Poucos dados  
+- Diferença entre teste e real  
+- Integração de sensores  
 
 ---
 
 ## Etapa 2 – Coleta dos artigos
 
-Após isso, vocês devem:
-- Baixar pelo menos 8 artigos científicos em formato PDF  
-- Garantir que os artigos sejam relevantes para o problema escolhido  
-- Priorizar artigos recentes e de fontes confiáveis  
+- Baixar pelo menos 8 artigos científicos em PDF  
+- Garantir relevância  
+- Priorizar fontes confiáveis  
 
 ---
 
@@ -110,7 +107,7 @@ Após isso, vocês devem:
 
 ### Prompt para uso no NotebookLM
 
-Com base nos artigos fornecidos, responda às seguintes questões:
+Com base nos artigos fornecidos, responda:
 
 - Quais técnicas de aprendizado de máquina são mais utilizadas para esse problema?  
 - Quais atributos (features) aparecem com mais frequência?  
@@ -120,23 +117,36 @@ Com base nos artigos fornecidos, responda às seguintes questões:
 
 ---
 
-Apresente os resultados em dois formatos:
+## Resultados
 
-1. Um resumo estruturado em texto, sintetizando os principais pontos encontrados na literatura.  
+### o Resumo estruturado da literatura
 
-2. Uma tabela comparativa contendo, para cada artigo:
-- Nome ou referência do artigo  
-- Técnica(s) utilizada(s)  
-- Atributos utilizados  
-- Tipo de tarefa (classificação, regressão ou agrupamento)  
-- Técnicas de pré-processamento  
-- Métricas de avaliação  
-- Principais contribuições do artigo  
+A literatura revisada destaca uma transição significativa de métodos tradicionais para técnicas de Deep Learning para resolver problemas de navegação e identificação para deficientes visuais.
+
+- Técnicas de aprendizado de máquina: uso de YOLO (especialmente YOLOv8), Visual SLAM, redes neurais profundas e aprendizado por reforço (DQN, PPO, SAC).  
+- Atributos: keypoints, descritores visuais, cor, formato e marcações.  
+- Desafios: ambientes complexos, iluminação, sobrecarga sensorial e limitações de hardware.  
+- Pré-processamento: redimensionamento de imagens, data augmentation, escala de cinza.  
+- Métricas: mAP, precisão, recall, RMSE e ATE.  
 
 ---
 
+
 ## Entregáveis da Etapa 3
 
-o Resumo estruturado da literatura  
+o Resumo estruturado da literatura
+
 
 o Tabela comparativa dos artigos analisados
+
+
+| Artigo | Técnica(s) | Atributos | Tipo de Tarefa | Pré-processamento | Métricas | Contribuições |
+|---|---|---|---|---|---|---|
+| Artigo 1 e 4 | Revisão (CNN, YOLO) | Sinais fisiológicos e imagens | Classificação | N/A | N/A | Identificação de desafios |
+| Artigo 2 | DRL (DQN, PPO) | Estados do ambiente | Regressão | Normalização | Score | Biblioteca RL |
+| Artigo 5 | SLAM + DL | Keypoints | Regressão | Grayscale | RMSE | Navegação robusta |
+| Artigo 6 | YOLOv8 | Cor, formato | Classificação | Augmentation | mAP | App de pílulas |
+| Artigo 7 | Group Averaging | Variáveis físicas | Regressão | Transformações | RMSE | Melhoria de precisão |
+| Artigo 8 | H-CNN | Pixels hexagonais | Classificação | Interpolação | Acurácia | Novo framework |
+
+---
